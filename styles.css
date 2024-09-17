@@ -1,18 +1,38 @@
-
 /* fuente importada de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
 /* Se reinician los espacios que se agregan por defecto, quedan en 0 */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 /* todo texto tendrá la fuente Montserrat, botones, entradas de texto, body, etc. */
-body, button, input {
+body,
+button,
+input {
     font-family: 'Montserrat', sans-serif;
 }
+
+/* Estilo para el contenedor del header */
+.header {
+    position: fixed; /* Para que el logo se quede en la parte superior mientras haces scroll */
+    top: 5px;
+    left: 135px;
+    padding: 1px; /* Espaciado alrededor del logo */
+    background-color: #fff; /* Fondo blanco para el área del logo (opcional) */
+    z-index: 1000; /* Para asegurarte de que el logo esté sobre otros elementos */
+}
+
+/* Estilo para el logo */
+.logo {
+    width: 250px; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto; /* Mantiene la relación de aspecto */
+    margin-top: 0px;
+    margin-left: -100px;
+}
+
 
 /* La clase container estará centrada, que es el contenedor "padre" de todo el formulario */
 .container {
@@ -27,9 +47,9 @@ body, button, input {
     color: rgb(100, 100, 114);
 }
 
-.crud_form{
+.crud_form {
     display: flex;
-    margin: 10px 0;   
+    margin: 10px 0;
 }
 
 /* Tamaño de fuente de las entradas a 1rem unidad relativa, equivale al tamaño por defecto del navegador, 2rem = 18px * 2  */
@@ -49,7 +69,7 @@ body, button, input {
 }
 
 /* efecto al pasar el mouse sobre el botón, crece 1.2  */
-.button:hover{
+.button:hover {
     transform: scale(1.2);
 }
 
@@ -64,18 +84,19 @@ body, button, input {
 }
 
 /* Estilos especificos a "botón "terciary" que se crean automaticamente en la celda "acciones"*/
-.button--terciary {
+/* .button--terciary {
     background-color: #dc3545;
     color: #f0f0f0;
-}
+} */
 
 /* Estilos a la tabla del Crud */
-.crudtable{
+.crudtable {
     width: 100%;
     border-collapse: collapse;
 }
 
-.table_header, .table_body td {
+.table_header,
+.table_body td {
     border: 1px solid #cccccc;
     padding: 5px;
 }
@@ -85,7 +106,7 @@ body, button, input {
 }
 
 /* Estilos para el tercer elemento de la tablebody lo que serán los botones de la celda "acciones" */
-.table_body td:nth-child(3){
+.table_body td:nth-child(3) {
     display: flex;
     justify-content: space-around;
 }
